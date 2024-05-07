@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input Information Form</title>
+        <link rel="stylesheet" href="style.css"/>
+        <style>
+            body {
+                margin: 0;
+                padding: 20px;
+            }
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            input[type="text"],
+            input[type="date"],
+            input[type="file"],
+            input[type="range"],
+            textarea {
+                width: 70%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+            input[type="submit"],
+            input[type="reset"],
+            button {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover,
+            input[type="reset"]:hover,
+            button:hover {
+                background-color: #45a049;
+            }
+            .agender{
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .bgender{
+                display: flex;
+                justify-content: space-around;
+            }
+            .form-info{
+                display: flex;
+                justify-content: space-between;
+            }
+            .form-under{
+                margin-top: 30px;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .under-item{
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Front-End Web Development</h1>
+        <h2>Lab 3: Using Form</h2>
+        <hr>
+        <form action="#" method="post">
+            <div class="form-info">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-info">
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+
+            <div class="form-info">
+                <label for="resume">Resume (PDF):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+            </div>
+
+            <div class="form-info">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" min="18" max="100">
+            </div>
+
+            <div class="form-info">
+                <label for="gender">Gender:</label>
+                <div class="bgender">
+                    <div style="margin: 0 50px 0 100px">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div style="margin: 0 50px">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-under">
+                <input type="submit" value="Submit" class="under-item">
+                <input type="reset" value="Reset" class="under-item">
+            </div>
+
+        </form>
+        <hr>
+        <h3>HE180896 - Đặng Thái Sơn</h3>
+    </body>
+</html>
